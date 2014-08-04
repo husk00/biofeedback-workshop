@@ -1,0 +1,57 @@
+#N canvas 512 187 803 445 10;
+#X declare -lib mrpeach;
+#X obj 513 30 import mrpeach;
+#X obj 249 26 udpreceive 90005;
+#X obj 249 133 routeOSC /x /y /z;
+#X floatatom 249 159 5 0 0 0 - - -;
+#X floatatom 282 184 5 0 0 0 - - -;
+#X floatatom 315 212 5 0 0 0 - - -;
+#X obj 249 52 unpackOSC;
+#X obj 249 83 pipelist;
+#X text 173 133 acelerometro;
+#X obj 249 111 routeOSC /wii/acc /wii/keys;
+#X obj 328 246 routeOSC /one /two /a /b /left /right /up /down /home
+/plus /minus;
+#X obj 328 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 359 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 391 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 423 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 455 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 487 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 519 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 551 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 583 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 615 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 647 284 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 276 255 botones;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 9 0;
+#X connect 9 0 2 0;
+#X connect 9 1 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 10 3 14 0;
+#X connect 10 4 15 0;
+#X connect 10 5 16 0;
+#X connect 10 6 17 0;
+#X connect 10 7 18 0;
+#X connect 10 8 19 0;
+#X connect 10 9 20 0;
+#X connect 10 10 21 0;
